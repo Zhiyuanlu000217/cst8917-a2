@@ -31,7 +31,7 @@ Overview: An extension of Azure Functions for writing stateful, long-running wor
 
 
 
-### 3. Azure Logic Apps
+# 3. Azure Logic Apps
 
 Overview: A visual, low-code/no-code workflow service for automating business processes. It excels at enterprise application integration and connecting disparate systems using a large library of pre-built connectors.
 
@@ -44,4 +44,16 @@ Overview: A visual, low-code/no-code workflow service for automating business pr
 | Strengths | - Best for non-developers and business users. <br>- Huge library of enterprise connectors. | - Versatile for both visual and code-based workflows. <br>- Powerful for orchestrating AWS services. | - Cost-effective and fast. <br>- Ideal for developer-centric orchestrations. |
 | Weaknesses | - Can be more expensive for high-volume tasks. <br>- Less flexible for custom code. | - Visual designer is not as mature as Logic Apps. | - Lacks a visual designer and extensive connector library. |
 
+# 4. Azure Service Bus (Queues & Topics)
+
+Overview: A fully managed enterprise message broker for decoupling applications. It provides durable messaging with advanced features like message sessions, dead-lettering, and filtering, supporting both queues and pub/sub topics.
+
+| Category | Azure Service Bus | Amazon SQS | Google Cloud Pub/Sub |
+| :--- | :--- | :--- | :--- |
+| Core Features | Supports queues (one-to-one) and topics (pub/sub). Advanced filtering. | Queuing service. Offers Standard (at-least-once) and FIFO (exactly-once) queues. | Global, real-time pub/sub service. Automatic scaling. |
+| Integration| Integrates with Azure Functions, Logic Apps, and Stream Analytics. | Works with a wide range of AWS services (Lambda, SNS, EC2). | Integrates with GCP services (Cloud Functions, Dataflow). |
+| Monitoring | Azure Monitor. Provides metrics on messages and throughput. | CloudWatch. Offers metrics for messages sent/received. | Cloud Monitoring/Logging. Real-time metrics on message counts. |
+| Pricing | Standard Tier: Base charge (~$0.0135/hour) plus tiered pricing per million operations. | Standard Queues: Pay-per-request ($0.40 per million). Free tier includes 1 million requests/month. | Pay-per-data volume transmitted ($40 per TiB). First 10 GB/month is free. |
+| Strengths | - Enterprise-grade features. <br>- Supports both queues and pub/sub models. | - Simple, highly scalable, and cost-effective for queues. | - Global true pub/sub model. <br>- Automatic scaling for high volume. |
+| Weaknesses | - Can be more expensive for simple use cases. | - Not a native pub/sub service (requires SNS). | - Lacks some enterprise features like message sessions. |
 
