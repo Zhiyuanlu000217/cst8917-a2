@@ -57,3 +57,18 @@ Overview: A fully managed enterprise message broker for decoupling applications.
 | Strengths | - Enterprise-grade features. <br>- Supports both queues and pub/sub models. | - Simple, highly scalable, and cost-effective for queues. | - Global true pub/sub model. <br>- Automatic scaling for high volume. |
 | Weaknesses | - Can be more expensive for simple use cases. | - Not a native pub/sub service (requires SNS). | - Lacks some enterprise features like message sessions. |
 
+
+
+# 5. Azure Event Grid
+
+Overview: A fully managed event routing service for building event-driven architectures. It helps you build applications that react to events from various sources by routing them to supported destinations.
+
+| Category | Azure Event Grid | AWS EventBridge | Google Cloud Eventarc |
+| :--- | :--- | :--- | :--- |
+| Core Features | Highly scalable event routing. Advanced filtering and custom topics. | Serverless event bus. Connects apps, SaaS, and AWS services. | Serverless event delivery. Routes events from GCP services. |
+| Integration| Works with a wide range of Azure services as sources and destinations. | Connects to numerous AWS services and over 50 SaaS partners. | Integrates with GCP services like Cloud Functions, Cloud Run, GKE. |
+| Monitoring | Azure Monitor. Metrics on delivery and latency. Configurable dead-lettering. | CloudWatch. Provides metrics and logs. Alarms for event ingestion. | Cloud Monitoring/Logging. Tracks delivery status and provides logs. |
+| Pricing | Basic Tier: Pay-per-operation ($0.60 per million operations). Free grant includes 100,000 operations per month. | Default Event Bus: Ingestion charges are $1.00 per million events for custom events. Delivery to another event bus is $1.00 per million events. | Standard: Pay-per-event. First 50,000 chargeable events/month are free. |
+| Strengths | - Simple and effective for Azure ecosystem. <br>- Strong filtering capabilities. | - Extensive integration with SaaS partners. <br>- Powerful rule engine for event transformation. | - Seamless integration with the GCP ecosystem. <br>- Easy to set up event-driven workflows. |
+| Weaknesses | - Primarily focused on the Azure ecosystem. | - Can be more complex than Event Grid for simple cases. | - Smaller ecosystem of integrated services and partners. |
+
