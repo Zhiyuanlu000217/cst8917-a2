@@ -31,4 +31,17 @@ Overview: An extension of Azure Functions for writing stateful, long-running wor
 
 
 
+### 3. Azure Logic Apps
+
+Overview: A visual, low-code/no-code workflow service for automating business processes. It excels at enterprise application integration and connecting disparate systems using a large library of pre-built connectors.
+
+| Category | Azure Logic Apps | AWS Step Functions | Google Cloud Workflows |
+| :--- | :--- | :--- | :--- |
+| Core Features | Visual designer, drag-and-drop interface. Hundreds of pre-built connectors. | Can use a visual Workflow Studio. Focused on orchestrating AWS services. | Code-based (YAML/JSON) service. Not a low-code/no-code tool. |
+| Integration | Large library of connectors (Office 365, Salesforce, SAP). | Integrates with AWS services. Can call external APIs. | Primarily integrates with GCP services and public HTTP endpoints. |
+| Monitoring | Azure Monitor. Provides run history and detailed logs in the designer. | Console visually tracks workflow executions. | Cloud Monitoring/Logging for step-by-step logs. |
+| Pricing | Consumption Plan: Pay-per-action. Standard Connectors are $0.000125 per call, Enterprise are $0.001 per call. | Standard Workflows: Priced per state transition ($0.025 per 1,000 transitions). | Pay-per-step executed. Free tier includes 5,000 steps per month. |
+| Strengths | - Best for non-developers and business users. <br>- Huge library of enterprise connectors. | - Versatile for both visual and code-based workflows. <br>- Powerful for orchestrating AWS services. | - Cost-effective and fast. <br>- Ideal for developer-centric orchestrations. |
+| Weaknesses | - Can be more expensive for high-volume tasks. <br>- Less flexible for custom code. | - Visual designer is not as mature as Logic Apps. | - Lacks a visual designer and extensive connector library. |
+
 
