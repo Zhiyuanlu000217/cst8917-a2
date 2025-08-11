@@ -15,3 +15,20 @@ Overview: Azure Functions is a serverless compute service that runs event-trigge
 | Strengths | - Flexible hosting plans. <br>- Excellent C#/.NET developer experience. | - Most mature and extensive ecosystem. <br>- Highly reliable. | - Fast cold starts. <br>- Competitive pricing. |
 | Weaknesses | - Potential cold starts on Consumption plan. | - Can become complex in large-scale setups. | - Smaller ecosystem compared to AWS and Azure. |
 
+
+# 2. Azure Durable Functions
+
+Overview: An extension of Azure Functions for writing stateful, long-running workflows. It handles orchestration, checkpointing, and state management, providing a code-first approach to complex workflows.
+
+| Category | Azure Durable Functions | AWS Step Functions | Google Cloud Workflows |
+| :--- | :--- | :--- | :--- |
+| Core Features | Code-first stateful workflows. Supports patterns like Fan-out/Fan-in. | Declarative (JSON) visual workflows. Integrates with over 200 services. | Declarative (YAML/JSON) orchestration. Built for reliability. |
+| Integration| Part of the Azure Functions ecosystem. Workflows are code-defined. | Integrates with Lambda, containers (ECS), and API Gateway. | Orchestrates GCP services and HTTP endpoints. |
+| Monitoring | Azure Monitor. Provides detailed history and logs for each orchestration. | Console provides a visual timeline of workflow execution. | Cloud Monitoring/Logging. Provides step-by-step execution logs. |
+| Pricing  | Cost is based on the underlying Azure Functions consumption. An additional cost for Durable orchestrations applies, which is not a separate line item but tied to the function's execution. | Standard Workflows: Priced per state transition ($0.025 per 1,000 transitions). Free tier includes 4,000 state transitions/month. | Pay-per-step executed. Free tier includes 5,000 steps and 2,000 external API calls per month. |
+| Strengths | - Code-first approach. <br>- Strong for complex, custom logic workflows. | - Powerful visual designer. <br>- Extensive integrations across AWS. | - Simple YAML/JSON syntax. <br>- Optimized for API orchestrations. |
+| Weaknesses | - Less intuitive for non-developers. | - JSON syntax can be verbose for complex flows. | - Lacks a visual designer and many pre-built connectors. |
+
+
+
+
