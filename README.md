@@ -72,3 +72,17 @@ Overview: A fully managed event routing service for building event-driven archit
 | Strengths | - Simple and effective for Azure ecosystem. <br>- Strong filtering capabilities. | - Extensive integration with SaaS partners. <br>- Powerful rule engine for event transformation. | - Seamless integration with the GCP ecosystem. <br>- Easy to set up event-driven workflows. |
 | Weaknesses | - Primarily focused on the Azure ecosystem. | - Can be more complex than Event Grid for simple cases. | - Smaller ecosystem of integrated services and partners. |
 
+
+
+# 6. Azure Event Hubs
+
+Overview: A highly scalable data streaming platform and event ingestion service. It is designed to handle massive volumes of streaming data from multiple sources in real time, with a partitioned consumer model.
+
+| Category | Azure Event Hubs | Amazon Kinesis Data Streams | Google Cloud Pub/Sub |
+| :--- | :--- | :--- | :--- |
+| Core Features | Partitioned consumer model. High throughput for real-time and batch. | Data stored in shards. Throughput capacity determined by shards. | Used for both messaging and streaming. Automatic scaling. |
+| Integration| Integrates with Azure Stream Analytics, Databricks, and Functions. | Integrates with other Kinesis services, Lambda, and S3. | Works with Cloud Functions, Dataflow, and BigQuery. |
+| Monitoring | Azure Monitor. Metrics on throughput, connections, and consumer groups. | CloudWatch. Provides metrics for shards, records, and bytes per second. | Cloud Monitoring/Logging. Tracks message throughput and latency. |
+| Pricing | Based on throughput units (TUs). A TU is a specific amount of ingress/egress. Standard tier pricing starts at ~$0.04 per TU-hour. | Provisioned Capacity: Priced based on shards ($0.015 per shard-hour) and data ingested ($0.014 per million PUT payload units). | Pay-per-data volume transmitted ($40 per TiB). First 10 GB/month is free. |
+| Strengths | - Scalable and durable for big data. <br>- Flexible consumer model. | - Strong for real-time analytics. <br>- Full suite of Kinesis services available. | - Unified service for messaging and streaming. <br>- Auto-scaling reduces management overhead. |
+| Weaknesses | - TU model can be complex to manage. | - Manual management of shards can be a burden. | - Lacks a partitioned consumer model for some use cases. |
